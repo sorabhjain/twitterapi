@@ -3,7 +3,7 @@
     $appUrl = 'http://'.$_SERVER['HTTP_HOST'].'/twitter/index.php';
     $twitter = new TwitterAPI($appUrl);
 
-    // No oauth_verifier in URL. Do the 3-legged-OAuth-dance with Twitter, baby!
+    // No oauth_verifier in URL. Do the 3-legged-OAuth-validation
     // Step #0: Authorize flow
     if (!isset($_GET['oauth_verifier'])) {
         $authorizationURL = $twitter->getOAuthAuthorizationURL();
@@ -26,7 +26,7 @@
     // Step #3: Invoke API
     // Step 3a - Get 5 of @teemus' tweets
     $url = 'https://api.twitter.com/1.1/statuses/user_timeline.json';
-    $timelineJson = $twitter->invokeAPI($url, 'GET', array('screen_name' => 'teemus', 'count' => '5'));
+    $timelineJson = $twitter->invokeAPI($url, 'GET', array('screen_name' => 'grt_yhoo', 'count' => '5'));
     $timeline = json_decode($timelineJson, true);
     echo '<pre>';
     var_dump($timeline);
