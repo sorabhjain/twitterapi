@@ -1,9 +1,6 @@
 <?php
 
 class TwitterAPI {
-    private $consumerKey = 'd2Qnfm17U2FwOGXSt55Vw';
-    private $consumerSecret = 'fh7FMMjXDeDUaKcDzRTasONCQqVa84N0ge22NVYw';
-    private $nonceSecret = 'erhhththyt';
     private $consumerKey = 'd2Qnfm17U2FwOGXSt55Vw'; //consumer key goes here
     private $consumerSecret = 'fh7FMMjXDeDUaKcDzRTasONCQqVa84N0ge22NVYw'; //consumer secret goes here  
     private $nonceSecret = 'erhhththyt'; //any random string
